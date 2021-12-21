@@ -4,23 +4,13 @@ import React, { useEffect, useState } from "react";
 import styles from '../styles/score.module.css'
 
 const Score = () => {
-  const [score, setScore] = useState()
+  const [wrongAttempts, setWrongAttempts] = useState()
+  const [name, setName] = useState()
 
   useEffect(() => {
-    Axios.get('http://localhost:5000/score')
-      .then(res => {
-        console.log(res)
-        const data = JSON.parse(res.data)
-        const result = data.filter(score => score.name == Router.query.name)
-        setScore(result)
-        console.log(result, Router.query.name);
-      }
-      )
-      .catch(err =>
-        console.log(err)
-      )
-  }, [])
-
+    setName(Router?.query?.name)
+    setWrongAttempts(Router?.query?.w)
+  },[])
   const handleRetry = () => {
     Router.push('/')
   }
@@ -29,10 +19,8 @@ const Score = () => {
     <div className={styles.container}>
       <h1>Score</h1>
       <div className={styles.scoreBox}>
-        <h2 className={styles.heading}>Name : {score?.name || '-'}</h2>
-        <p>No. of attempts : {score?.attempt || '-'}</p>
-        <p>No. of currect answer : {score?.currect || '-'}</p>
-        <p>No. of wrong answer : {score?.wrong || '-'}</p>
+        <h2 className={styles.heading}>Name : {name || '-'}</h2>
+        <h3>No. of wrong attempt : {wrongAttempts || '-'}</h3>
       </div>
       <button className={styles.button} onClick={handleRetry}>Retry</button>
     </div>
