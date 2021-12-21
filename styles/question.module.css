@@ -1,0 +1,43 @@
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url('../public/images/Background/Background.jpeg') center center/cover no-repeat;
+}
+.optionBox {
+    display: flex;
+    justify-content: space-around;
+}
+.option {
+    cursor: pointer;
+    /* border: 2px solid #d4d4d4; */
+    background-color: #05799c;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+.option:hover {
+    background-color: #354753;
+    /* border: 2px solid #354753; */
+    color: #fff;
+}
+.button {
+    border: none;
+    outline: none;
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: red;
+    color: #fff;
+}
+.image {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #000;
+    border-radius: 12px;
+}
