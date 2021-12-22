@@ -53,7 +53,7 @@
 .errorText {
     color: red;
     margin: -5px 0 10px 0;
-    font-size: 1.4vw;
+    font-size: 1.5vw;
 }
 
 @media only screen and (max-width: 500px) {
@@ -71,5 +71,8 @@
     }
     .formBoxHeading {
         font-size: 10vw;
+    }
+    .errorText {
+        font-size: 20px;
     }
 }
