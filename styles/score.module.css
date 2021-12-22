@@ -3,7 +3,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background: url('../public/images/Background/Background.jpeg') center center/cover no-repeat; */
     background: #1f9999;
 }
 .scoreBox {
@@ -22,13 +21,6 @@
     margin: 0;
 }
 .button {
-    /* border: none;
-    outline: none;
-    background-color: #fff;
-    padding: 8px 15px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 10px; */
     outline: none;
     width: 10%;
     height: 40px;
@@ -45,4 +37,14 @@
     color: black;
     border: 2px solid #fff;
     box-shadow: 0px 10px 20px #000;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .scoreBox {
+        height: 50vh;
+    }
+    .button {
+        width: 80%;
+    }
 }

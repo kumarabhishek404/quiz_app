@@ -45,7 +45,6 @@ const Welcome = () => {
           }
           <button
             className={styles.button}
-            // disabled={!isValid}
             onClick={handleNext}>
             Next
           </button>

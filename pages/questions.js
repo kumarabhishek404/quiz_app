@@ -21,7 +21,7 @@ import {
 const questionsList = [
   {
     image: LION,
-    options: ["Goat", "Lion", "Leopard"],
+    options: ["Goat", "Lion", "Donkey"],
     answer: 'Lion'
   },
   {
@@ -82,7 +82,7 @@ const questionsList = [
 ]
 
 const Question = () => {
-  const [currQuestion, setCurrQuestion] = useState(questionsList[0])
+  const [currQuestion, setCurrQuestion] = useState(questionsList[Math.floor(Math.random() * questionsList.length)])
   const [attemptQuestion, setAttemptQuestion] = useState(0)
   const [selectedOption, setSelectedOption] = useState()
   const [currAnswers, setCurrAnswers] = useState(0)
@@ -92,19 +92,11 @@ const Question = () => {
 
   const handleNext = () => {
     if (currect) {
-      var chooser = HandleRandomQuestion(questionsList);
-      setCurrQuestion(chooser())
-      // const ques = Math.floor(Math.random() * questionsList.length)
-      // setCurrQuestion(questionsList[ques])
-      console.log(chooser());
+      const ques = Math.floor(Math.random() * questionsList.length)
+      setCurrQuestion(questionsList[ques])
       setAttemptQuestion(prev => prev + 1)
     }
   }
-
-  useEffect(() => {
-    var chooser = HandleRandomQuestion(questionsList);
-    setCurrQuestion(chooser())
-  }, [])
 
   const handleOption = (answer) => {
     const currectAnswer = currQuestion.answer
@@ -140,18 +132,6 @@ const Question = () => {
       { headers })
       .then(res => console.log(res))
       .catch(err => console.log(err))
-  }
-
-  const HandleRandomQuestion = (array) => {
-    var copy = array.slice(0);
-    console.log(copy);
-    return function () {
-      if (copy.length < 1) { copy = array.slice(0); }
-      var index = Math.floor(Math.random() * copy.length);
-      var item = copy[index];
-      copy.splice(index, 1);
-      return item;
-    };
   }
 
   return (
