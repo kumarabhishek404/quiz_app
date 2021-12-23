@@ -31,7 +31,7 @@ const questionsList = [
   },
   {
     image: ELEPHANT,
-    options: ["Cow", "Elephant", "Aligator"],
+    options: ["Cow", "Elephant", "Alligator"],
     answer: 'Elephant'
   },
   {
@@ -46,8 +46,8 @@ const questionsList = [
   },
   {
     image: PANTHER,
-    options: ["Cat", "Panther", "Dog"],
-    answer: 'Panther'
+    options: ["Cat", "Panthera", "Dog"],
+    answer: 'Panthera'
   },
   {
     image: BAT,
@@ -66,7 +66,7 @@ const questionsList = [
   },
   {
     image: BUTTERFLY,
-    options: ["Lizard", "Ziraff", "Butterfly"],
+    options: ["Lizard", "Giraffe", "Butterfly"],
     answer: 'Butterfly'
   },
   {
@@ -140,7 +140,7 @@ const Question = () => {
         attemptQuestion < 5
           ? <>
             <h1>Questions</h1>
-            <h3>Did you know this picture?</h3>
+            <h3>Do you know this picture?</h3>
             <div className={styles.questionBox}>
               <h3>{currQuestion.question}</h3>
               <figure className={styles.figureBox}>
