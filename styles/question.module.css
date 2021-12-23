@@ -22,11 +22,11 @@
 }
 .buttonBox {
     margin: 10px auto;
-    width: 100px;
+    text-align: center;
 }
 .button {
     outline: none;
-    width: 100%;
+    width: 350px;
     height: 40px;
     margin-top: 10px;
     cursor: pointer;
@@ -82,7 +82,7 @@
     .optionBox {
         margin-top: 10px;
     }
-    .buttonBox {
-        width: 85%;
+    .button {
+        width: 300px;
     }
 }
