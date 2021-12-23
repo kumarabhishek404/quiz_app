@@ -10,7 +10,7 @@
     border-radius: 8px;
     box-shadow: 0px 10px 20px black;
     background: #fff;
-    height: 30vh;
+    height: 200px;
     width: 300px;
     border-radius: 10px;
     display: flex;
@@ -41,9 +41,6 @@
 
 
 @media only screen and (max-width: 500px) {
-    .scoreBox {
-        height: 50vh;
-    }
     .button {
         width: 80%;
     }

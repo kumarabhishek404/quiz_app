@@ -59,14 +59,14 @@
 }
 .errorText {
     text-align: center;
-    margin: 10px 0px;
+    margin: -10px 0px;
     color: red;
     font-weight: bold;
 }
 .questionBox {
     box-shadow: 0px 10px 20px black;
     background: #fff;
-    height: 50vh;
+    height: 280px;
     width: 350px;
     border-radius: 10px;
 }
@@ -80,7 +80,7 @@
         width: 300px;
     }
     .optionBox {
-        margin-top: 40px;
+        margin-top: 10px;
     }
     .buttonBox {
         width: 85%;

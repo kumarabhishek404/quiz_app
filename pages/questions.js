@@ -146,6 +146,9 @@ const Question = () => {
               <figure className={styles.figureBox}>
                 <img className={styles.image} src={currQuestion.image} />
               </figure>
+              {
+                isWrong && <p className={styles.errorText}>Wrong Answer Try Again!</p>
+              }
               <div className={styles.optionBox}>
                 {
                   currQuestion.options.map((option, index) => (
@@ -158,9 +161,6 @@ const Question = () => {
                   ))
                 }
               </div>
-              {
-                isWrong && <p className={styles.errorText}>Wrong Answer Try Again!</p>
-              }
             </div>
           </>
           : <>
